@@ -1,0 +1,201 @@
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+   
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<title> REGISTRATION PAGE</title>
+		
+		<script>
+			
+			function myFunction3()
+			{
+			var str=document.getElementById("age").value;
+			if(str<=0)
+			{
+			alert("error in Age:");
+			}
+			}
+			function myFunction4()
+			{
+			var str=document.getElementById("number").value;
+			if(str.length<1)
+			{
+			alert("plaese enter your phone number");
+			}
+			if(str.length<10)
+			{
+			alert("error in Phone Number:");
+			}
+			}
+			function fun1()
+			{
+			
+			var c=document.getElementById("number").value;
+			if(c=="")
+			{
+			alert("please enter your phone number");
+			}
+			
+			var d=document.getElementById("mail").value;
+			if(d=="")
+			{
+				alert("please enter your mail id");
+			}
+			
+			var e = document.getElementById("dd");
+			var strUser = e.options[e.selectedIndex].value;
+			var strUser1 = e.options[e.selectedIndex].text;
+			if(strUser==0) 
+			{
+			alert("Please select Year of study");
+			}
+			
+			var k = document.getElementById("dept");
+			var strUser = k.options[k.selectedIndex].value;
+			var strUser1 = k.options[k.selectedIndex].text;
+			if(strUser==0) 
+			{
+			alert("Please select your branch");
+			}
+			
+			var x = document.getElementById("check").checked;
+			if(x==false)
+			{
+			alert("please accept terms and condition");
+			}
+			
+			document.getElementById("sub").addEventListener("click", displayMessage);
+			function displayMessage(){
+				alert("Do you want to submit");
+			}
+			
+			}
+		
+		</script>
+		<style>
+		#shadow {
+  border: .1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px #888888;
+  border-radius: 8px;
+  
+}
+		body
+		{
+		background-image: url(img.jpg);
+		background-repeat: no-repeat, repeat;
+		background-size: cover;
+		}
+	</style>
+	</head>
+	<body >
+	
+	<div class="container" >
+			<center>
+				<h1 >REGISTRATION FORM</h1>
+			</center>
+		<br>
+		
+		<div class="row">	
+
+		<div class="col-lg-4">
+		</div>
+		<div class="col-lg-6 col-12">
+				
+		<div class="enroll-form">
+							
+		<form>
+		
+			<div class="content">
+			<div class="col-lg-7 col-12">
+		
+			<b>First name:</b>
+			<br>
+			<input type="text" name="firstname" id="fname"  placeholder="enter your first name" style="width: 300px;" required>
+			<br>
+			<b>Last name:<br></b>
+			<input type="text" name="Lastname" id="uname"  placeholder="enter your last name" style="width: 300px;" required>
+			<br>
+			<b>College name:<br></b>
+			<input type="text" name="college name" id="cname" placeholder="enter your clg name" style="width: 300px;" required>
+			<br>
+			<b>residence city:<br></b>
+			<input type="text" name="residence city" style="width: 300px;" required>
+			<br>
+			<b>Age:<br></b>
+			<input type="text" id="age" name="Age" onchange="myFunction3()" style="width: 300px;" required>
+			<br>
+			<b>Phone Number:<br></b>
+			<input id="number" type="text" name="Number" onchange="myFunction4()" style="width: 300px;" required>
+			<br>
+			<b>Email id:<br></b>
+			<input id="mail" type="email" name="mail" style="width: 300px;" required>
+			<br>
+			<b>Year of study:<br></b>
+			<select id="dd" style="width: 300px;">
+				<option value="0">Select Year of study</option>
+				<option value="1">1st year</option>
+				<option value="2">2nd year</option>
+				<option value="3">3rd year</option>
+				<option value="4">4th year</option>
+			</select>
+			<br>
+			<b>Branch:<br></b>
+			<select id="dept" style="width: 300px;">
+				<option value="0">Select one department</option>
+				<option value="1">CIVIL</option>
+				<option value="2">CHEMICAL</option>
+				<option value="3">CSE</option>
+				<option value="4">IT</option>
+				<option value="5">CSE</option>
+				<option value="6">ECE</option>
+				<option value="7">ECSE</option>
+			</select>
+			<br>
+			<b>Gender:<br></b>
+			<input type="radio" name="gender" id ="gender" value="Male" checked>Male</input>
+			<br>
+			<input type="radio" name="gender" id ="gender" value="Female">Female</input>
+			<br>
+			<input type="radio" name="gender" id ="gender" value="Others">Others</input>
+			<br>
+			<b>Hostel requirement:<br></b>
+			<input type="radio" name="hostel" id ="hostel" value="Yes">YES</input>
+			<br>
+			<input type="radio" name="hostel" id ="hostel" value="No">NO</input>
+			<br>
+			<b><input type="checkbox" id="check" required>*I accept to all terms and conditions<br></b>
+			<input type="submit" name="Submit" value="register" id="sub" onclick="fun1()">
+			&nbsp;
+			&nbsp;&nbsp;&nbsp;
+			<input type="Reset" name="Reset" value="Reset">
+		</div>
+		
+		</div>
+		</form>
+		
+		</div>
+		</div>
+		<div class="col-lg-2">
+		</div>
+		<!--<div class="col-lg-4 col-12">
+		
+			<div class="im">
+				<img src="swecha.png" alt="swecha intern" style="width:600px;height:400px; " align="right">
+			</div>
+		</div>
+		</div>
+		</div>-->
+		</div>
+		</div>
+		
+	</body>
+</html>
